@@ -11,14 +11,11 @@ class Person
 		age1=0;
 		age2=0;
 	}
-	Person(int a1, int a2)
+	void elder(int age1, int age2)
 	{
-		age1=a1;
-		age2=a2;
-	}
-	void elder()
-	{
-		if(age1>age2)
+        this->age1=age1;
+        this->age2=age2;
+		if(this->age1>this->age2)
 		cout<<" person 1 is older"<<'\n';
 		else
 	 cout<<"Person 2 is older";
@@ -26,7 +23,7 @@ class Person
 };
 int main()
 {
-	Person p(24,25);
-	p.elder();
+	Person p;
+	p.elder(25,26);
 	return 0;
 }
